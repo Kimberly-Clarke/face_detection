@@ -1,8 +1,8 @@
 import cv2
-
 classifier = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")#path to cascade file
 rec = cv2.VideoCapture(0)# to capture video from the webcam use 1 for external webcam
 '''rec = cv2.VideoCapture(//path of the video.mp4//)'''# to detect faces in a video file
+
 while True:
 	ret, frame = rec.read() #takes two arguments and start reading frames
 	faces = classifier.detectMultiScale(frame)# variables for finding frames
